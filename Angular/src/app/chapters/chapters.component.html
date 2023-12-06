@@ -1,0 +1,20 @@
+<div class="chapter-list">
+  <h2 class="chapter-heading">Chapters for {{ course }}</h2>
+
+  <div *ngIf="chapters.length === 0; else chaptersList" class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <ng-template #chaptersList>
+    <ul class="chapter-items">
+      <li *ngFor="let chapter of chapters" class="chapter-item">
+        <div class="chapter-info">
+          <div class="chapter-name">{{ chapter.chapter }}</div>
+          <a (click)="generateQCM(chapter.chapter, chapter.url)" class="chapter-link">Generate QCM</a>
+        </div>
+      </li>
+      <li *ngIf="chapters.length === 0" class="no-chapters">No chapters available.</li>
+    </ul>
+  </ng-template>
+</div>

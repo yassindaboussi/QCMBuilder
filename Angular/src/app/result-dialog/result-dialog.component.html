@@ -1,0 +1,9 @@
+<div class="custom-dialog">
+  <h2 mat-dialog-title class="dialog-title">Quiz Result</h2>
+  <div mat-dialog-content class="dialog-content">
+    <p>You have {{ data.totalCorrectAnswers }} correct answer{{ data.totalCorrectAnswers !== 1 ? 's' : '' }} from {{ data.totalQuestions }}.</p>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button [mat-dialog-close]="'close'" class="dialog-button">Close</button>
+  </div>
+</div>

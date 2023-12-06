@@ -1,0 +1,15 @@
+<div class="image-container">
+  <img src="assets/logoEsprit.png" alt="Class Image">
+</div>
+
+<div class="text-container">
+  <p class="select-text">Select your class level?</p>
+</div>
+
+<div class="card-container">
+  <mat-card class="class-card" *ngFor="let level of classLevels" (click)="navigateToCourses(level)">
+    <mat-card-content>
+      {{ level }}
+    </mat-card-content>
+  </mat-card>
+</div>

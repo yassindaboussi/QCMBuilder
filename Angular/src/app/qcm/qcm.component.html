@@ -1,0 +1,56 @@
+<div class="qcm-list">
+  <h2 class="qcm-heading">Generated QCM for {{ courseName }} - {{ chapterName }}</h2>
+
+  <div *ngIf="qcms.length === 0; else qcmContent" class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <ng-template #qcmContent>
+    <ng-container *ngIf="currentQuestionIndex < qcms.length">
+      <div class="qcm-info">
+
+        <div class="qcm-reset">
+          <button class="qcm-reset-button" (click)="ResetQCM()">Reset</button>
+        </div>
+      
+        <div class="qcm-progress">
+          <div class="qcm-progress-bar">
+            <div class="qcm-progress-fill" [style.width.%]="(currentQuestionIndex + 1) / qcms.length * 100">
+              <span class="qcm-progress-text">{{ currentQuestionIndex + 1 }}/{{ qcms.length }}</span>
+            </div>
+          </div>
+        </div>            
+        <div class="qcm-question">{{ qcms[currentQuestionIndex].question }}</div>
+        <div class="qcm-options">
+          <p
+            *ngFor="let option of qcms[currentQuestionIndex].options.trim().split('\n')"
+            [class.selected]="selectedOptions[currentQuestionIndex] === option"
+            [class.disabled]="answeredQuestions[currentQuestionIndex]"
+            (click)="selectedOption = option; onCheckAnswer()">
+            {{ option }}
+          </p>
+        </div>               
+        <div class="qcm-result" [ngClass]="{'show': showResult || selectedOptions[currentQuestionIndex] !== null}">
+          <div class="qcm-answer" [ngClass]="{
+            'correct': selectedOption && selectedOption.charAt(0) === qcms[currentQuestionIndex].answer,
+            'incorrect': selectedOption && selectedOption.charAt(0) !== qcms[currentQuestionIndex].answer
+          }">
+            Your answer is {{ selectedOption && selectedOption.charAt(0) === qcms[currentQuestionIndex].answer ? 'correct' : 'incorrect' }}.
+          </div>        
+          <div class="qcm-correct-answer">
+            Correct Answer: {{ qcms[currentQuestionIndex].answer }}
+          </div>
+          <div class="qcm-explanation">
+            Explanation: {{ qcms[currentQuestionIndex].explanation }}
+          </div>
+        </div>
+        <div class="qcm-buttons">
+          <button *ngIf="currentQuestionIndex > 0" class="qcm-button qcm-button-left" (click)="onPreviousQuestion()">Previous Question</button>
+          <button *ngIf="currentQuestionIndex < qcms.length - 1 && answeredQuestions[currentQuestionIndex]" class="qcm-button qcm-button-right" (click)="onNextQuestion()">Next Question</button>
+        </div>
+      </div>
+    </ng-container>
+    <div *ngIf="currentQuestionIndex >= qcms.length && qcms.length > 0" class="no-qcms">No more questions available.</div>
+  </ng-template>
+</div>

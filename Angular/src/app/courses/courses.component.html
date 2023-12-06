@@ -1,0 +1,23 @@
+<div class="text-container" *ngIf="courses.length > 0">
+  <p class="select-text">Select your courses for {{ academicYearLevel }}:</p>
+</div>
+
+<div class="card-container" *ngIf="courses.length > 0; else noCourses">
+  <mat-card class="class-card" *ngFor="let course of courses" (click)="navigateToChapters(course.name)">
+    <mat-card-content>
+      <img class="course-logo" [src]="'assets/' + course.logo" alt="{{ course.name }} Logo">
+      <p class="course-name">{{ course.name }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+<ng-template #noCourses>
+  <div class="no-courses-message">
+    <div class="image-container">
+      <img src="assets/no_courses.png" alt="No Courses Image" class="no-courses-image">
+    </div>
+    There are no courses available for {{ academicYearLevel }}. Maybe coming soon!
+  </div>
+</ng-template>

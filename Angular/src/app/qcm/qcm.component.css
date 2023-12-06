@@ -1,0 +1,193 @@
+.qcm-list {
+  margin: 20px;
+}
+
+.qcm-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.qcm-info {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.qcm-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.qcm-options p {
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.qcm-options p.selected {
+  background-color: #f0f0f0;
+}
+
+.qcm-options p.disabled {
+  pointer-events: none;
+  background-color: #f0f0f0;
+}
+
+.qcm-explanation {
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.no-qcms {
+  font-style: italic;
+  color: #999;
+}
+
+.qcm-result {
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.qcm-result.active {
+  opacity: 1;
+  display: block;
+}
+
+
+.qcm-result {
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.qcm-result.show {
+  opacity: 1;
+}
+
+
+.qcm-answer.incorrect {
+  color: #d32f2f; 
+}
+
+.qcm-answer.correct {
+  color: #20a020;
+}
+
+
+
+.qcm-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically within the flex container */
+  margin-top: 20px;
+}
+
+.qcm-button-center {
+  margin: 0 auto; 
+}
+
+
+
+.qcm-button {
+  padding: 10px 20px;
+  background-color: #FF5733;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.qcm-button:hover {
+  background-color: #dd8f7e;
+}
+
+.qcm-button-left {
+  margin-right: 10px;
+}
+
+.qcm-button-right {
+  margin-left: 10px;
+}
+
+
+.qcm-progress {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.qcm-progress-bar {
+  width: 150px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.qcm-progress-fill {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #FF5733;
+  position: relative;
+  transition: width 0.3s ease-in-out; 
+}
+
+.qcm-progress-text {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #FF5733; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.qcm-button-right.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+

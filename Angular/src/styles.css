@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.custom-dialog {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  color: #333;
+}
+
+.dialog-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center; 
+  margin: 0 auto 10px; 
+}
+
+
+.dialog-content {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dialog-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0 auto; 
+  display: block; 
+}
+
+
+.dialog-button:hover {
+  background-color: #2980b9;
+}

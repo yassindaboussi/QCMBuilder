@@ -1,0 +1,84 @@
+.chapter-list {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+.chapter-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.chapter-items {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+.chapter-item:hover {
+  background-color: #f0f0f0;
+}
+
+.chapter-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.chapter-name {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.chapter-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.no-chapters {
+  text-align: center;
+  color: #888;
+  margin-top: 10px;
+}
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #FF5733; /* Choose a color for the spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
