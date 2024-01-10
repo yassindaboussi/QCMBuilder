@@ -2,7 +2,7 @@
 
 # QCM Builder 🚀
 
-QCM Builder is an exciting web application crafted with Node.js and Angular, tailored for generating multiple-choice questions (QCM). Ideal for various student classes and courses, it simplifies the process of selecting chapters, generating QCMs, providing detailed explanations for correct and incorrect answers, and even tracking progress.
+QCM Builder is an exciting web application 🌐 crafted with Node.js and Angular, tailored for generating multiple-choice questions (QCM). Ideal for various student classes and courses 📚, it simplifies the process of selecting chapters, generating QCMs 🔍, providing detailed explanations for correct and incorrect answers, and even tracking progress 📊.
 
 ## Project Structure 🏗️
 
@@ -36,12 +36,12 @@ To run the project locally, follow these straightforward steps:
 
 ## Usage 🎯
 
-1. Access the Angular application in your browser.
-2. Choose the relevant student class, course, and chapters.
-3. Generate the QCM effortlessly.
-4. Answer the questions, and detailed explanations await for both correct and incorrect answers.
-5. Keep an eye on your progress through the intuitive progress bar.
-6. Get a glimpse of your final score based on correct answers.
+1. 🌐 Access the Angular application in your browser.
+2. 🎓 Choose the relevant student class, course, and chapters.
+3. 🚀 Generate the QCM effortlessly.
+4. 🤔 Answer the questions, and detailed explanations await for both correct and incorrect answers.
+5. 📊 Keep an eye on your progress through the intuitive progress bar.
+6. 🏆 Get a glimpse of your final score based on correct answers.
 
 ## Screenshots 📷
 
